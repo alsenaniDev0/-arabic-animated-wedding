@@ -4,6 +4,22 @@
     "version": "1.0.0",
     "html": "index.html",
     "css": "style.css",
+    "features": {
+        "feelings": {
+            "enabled": true,
+            "approvalMode": "manual",
+            "preventDuplicate": true,
+            "rateLimitMinutes": 5,
+            "title": "شارك مشاعرك",
+            "description": "اكتب رسالة جميلة لأصحاب الدعوة"
+        },
+        "rsvp": {
+            "enabled": true,
+            "preventDuplicate": true,
+            "title": "هل ستحضر؟",
+            "description": "يسعدنا معرفة حضورك للمناسبة"
+        }
+    },
     "fields": [
         {
             "type": "icon",

@@ -120,6 +120,62 @@
             </div>
         </section>
 
+        <section class="rsvp-section" data-feature="rsvp">
+            <div class="section-heading">
+                <span>تأكيد الحضور</span>
+                <h2>هل ستحضر؟</h2>
+                <p>يسعدنا معرفة حضورك للمناسبة</p>
+            </div>
+
+            <div class="interaction-card">
+                <input class="interaction-input" type="text" placeholder="اكتب اسمك - اختياري" maxlength="60"
+                    data-rsvp-name>
+
+                <div class="rsvp-options">
+                    <button type="button" class="rsvp-option attending" data-rsvp-status="attending">
+                        <span>✅</span>
+                        <strong>سأحضر</strong>
+                    </button>
+
+                    <button type="button" class="rsvp-option not-attending" data-rsvp-status="not_attending">
+                        <span>❎</span>
+                        <strong>لن أحضر</strong>
+                    </button>
+
+                    <button type="button" class="rsvp-option maybe" data-rsvp-status="maybe">
+                        <span>❓</span>
+                        <strong>لم أقرر بعد</strong>
+                    </button>
+                </div>
+
+                <p class="interaction-message" data-rsvp-message></p>
+            </div>
+        </section>
+
+        <section class="feelings-section" data-feature="feelings">
+            <div class="section-heading">
+                <span>شارك مشاعرك</span>
+                <h2>اترك رسالة جميلة</h2>
+                <p>شارك كلماتك ومشاعرك مع أصحاب الدعوة</p>
+            </div>
+
+            <div class="interaction-card">
+                <input class="interaction-input" type="text" placeholder="اسمك" maxlength="60" data-feeling-name>
+
+                <textarea class="interaction-textarea" placeholder="اكتب رسالتك هنا..." maxlength="220"
+                    data-feeling-message></textarea>
+
+                <button type="button" class="interaction-submit" data-send-feeling>
+                    إرسال الرسالة
+                </button>
+
+                <p class="interaction-message" data-feeling-result></p>
+            </div>
+
+            <div class="feelings-list" data-feelings-list>
+            </div>
+        </section>
+
         <section class="closing">
             <div class="closing-card">
                 <span class="closing-icon">🤍</span>
