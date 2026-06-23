@@ -412,6 +412,15 @@ h1 {
     border-color: rgba(125, 143, 114, 0.55);
 }
 
+.rsvp-option:disabled,
+.interaction-submit:disabled,
+.safhat-rsvp-option:disabled,
+.safhat-interaction-submit:disabled {
+    opacity: 0.68;
+    cursor: wait;
+    transform: none !important;
+}
+
 .interaction-submit {
     width: 100%;
     min-height: 56px;
@@ -437,6 +446,20 @@ h1 {
 
 .interaction-message.error {
     color: #b91c1c;
+}
+
+.feeling-notice,
+.safhat-feeling-notice {
+    margin: 0 0 14px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    background: rgba(238, 244, 234, 0.82);
+    border: 1px solid rgba(125, 143, 114, 0.18);
+    color: #6f5948;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.8;
+    text-align: right;
 }
 
 .feelings-list {
