@@ -42,6 +42,18 @@ body.invite-locked {
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
+.wedding-site.show-icon-no .sound-icon {
+    display: none !important;
+}
+
+.wedding-site.show-icon-no .rings {
+    display: none !important;
+}
+
+.wedding-site.show-title-no .top-label {
+    display: none !important;
+}
+
 /* =========================
    HERO
 ========================== */
