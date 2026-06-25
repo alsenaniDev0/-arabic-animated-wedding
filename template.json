@@ -2,25 +2,33 @@
     "id": "royal-wedding",
     "name": "دعوة زفاف ملكية",
     "version": "1.0.0",
+    "schemaVersion": "1.0.0",
+    "type": "custom",
+    "language": "ar",
+    "direction": "rtl",
     "html": "index.html",
     "css": "style.css",
-    "features": {
-        "feelings": {
-            "enabled": true,
-            "approvalMode": "manual",
-            "preventDuplicate": true,
-            "rateLimitMinutes": 5,
-            "title": "شارك مشاعرك",
-            "description": "اكتب رسالة جميلة لأصحاب الدعوة"
-        },
-        "rsvp": {
-            "enabled": true,
-            "preventDuplicate": true,
-            "title": "هل ستحضر؟",
-            "description": "يسعدنا معرفة حضورك للمناسبة"
-        }
-    },
     "fields": [
+        {
+            "key": "showIcon",
+            "label": "إظهار الأيقونة",
+            "type": "select",
+            "formTab": "design",
+            "group": "visibility",
+            "required": true,
+            "defaultValue": "yes",
+            "options": [
+                {
+                    "label": "نعم",
+                    "value": "yes"
+                },
+                {
+                    "label": "لا",
+                    "value": "no"
+                }
+            ],
+            "width": "half"
+        },
         {
             "type": "icon",
             "label": "الأيقونة",
@@ -44,7 +52,35 @@
                 }
             ],
             "defaultValue": "💍",
-            "required": true
+            "required": true,
+            "visibleWhen": {
+                "field": "showIcon",
+                "equals": "yes"
+            },
+            "requiredWhen": {
+                "field": "showIcon",
+                "equals": "yes"
+            }
+        },
+        {
+            "key": "showTitle",
+            "label": "إظهار عنوان الدعوة",
+            "type": "select",
+            "formTab": "design",
+            "group": "visibility",
+            "required": true,
+            "defaultValue": "yes",
+            "options": [
+                {
+                    "label": "نعم",
+                    "value": "yes"
+                },
+                {
+                    "label": "لا",
+                    "value": "no"
+                }
+            ],
+            "width": "half"
         },
         {
             "defaultValue": "دعوة زواج",
@@ -52,7 +88,15 @@
             "key": "title",
             "maxLength": 60,
             "label": "عنوان الدعوة",
-            "type": "text"
+            "type": "text",
+            "visibleWhen": {
+                "field": "showTitle",
+                "equals": "yes"
+            },
+            "requiredWhen": {
+                "field": "showTitle",
+                "equals": "yes"
+            }
         },
         {
             "minLength": 10,
@@ -71,7 +115,14 @@
             "minItems": 2,
             "required": true,
             "separator": " و ",
-            "maxItems": 2
+            "maxItems": 2,
+            "designControls": {
+                "font": {
+                    "enabled": true,
+                    "label": "خط أسماء العروسين",
+                    "selector": ".hero-names"
+                }
+            }
         },
         {
             "type": "date",
@@ -83,7 +134,6 @@
             "type": "time",
             "key": "time",
             "label": "وقت الحفل",
-            "required": false,
             "defaultValue": "20:00"
         },
         {
@@ -105,7 +155,6 @@
         },
         {
             "hint": "ضع رابط YouTube وسيعمل كصوت للخلفية بعد فتح الدعوة",
-            "required": false,
             "patternMessage": "الرابط يجب أن يبدأ بـ http أو https",
             "pattern": "^https?:\\/\\/.+",
             "label": "رابط YouTube للصوت",
@@ -113,5 +162,21 @@
             "placeholder": "https://youtu.be/...",
             "type": "youtube"
         }
-    ]
+    ],
+    "features": {
+        "feelings": {
+            "enabled": true,
+            "approvalMode": "manual",
+            "preventDuplicate": true,
+            "rateLimitMinutes": 5,
+            "title": "شارك مشاعرك",
+            "description": "اكتب رسالة جميلة لأصحاب الدعوة"
+        },
+        "rsvp": {
+            "enabled": true,
+            "preventDuplicate": true,
+            "title": "هل ستحضر؟",
+            "description": "يسعدنا معرفة حضورك للمناسبة"
+        }
+    }
 }
