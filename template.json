@@ -63,6 +63,26 @@
             }
         },
         {
+            "key": "showTitle",
+            "label": "إظهار عنوان الدعوة",
+            "type": "select",
+            "formTab": "data",
+            "group": "visibility",
+            "required": true,
+            "defaultValue": "yes",
+            "options": [
+                {
+                    "label": "نعم",
+                    "value": "yes"
+                },
+                {
+                    "label": "لا",
+                    "value": "no"
+                }
+            ],
+            "width": "half"
+        },
+        {
             "defaultValue": "دعوة زواج",
             "required": true,
             "key": "title",
@@ -155,6 +175,7 @@
         "rsvp": {
             "enabled": true,
             "preventDuplicate": true,
+            "nameRequired": false,
             "title": "هل ستحضر؟",
             "description": "يسعدنا معرفة حضورك للمناسبة"
         }
